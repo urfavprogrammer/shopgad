@@ -9,19 +9,19 @@ export const Card = () => {
 
     return (
         <>
-            { loading && <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div> }
+            { loading && <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div> }
 
             { error && <p>{error}</p>}
-            
-            {products && products.map((product) => {
+
+            {products && products.map((product, index) => {
                 return (
-                    <div className="product">
+                    <div className="product" key={index}>
                         <img src={product.img} alt="" />
                         <p className="name">{product.name}</p>
 
                         <div className="action">
                             <p>${product.price}</p>
-                            <button>Add To Cart</button>
+                            <button id="addCart">Add To Cart</button>
                         </div>
                     </div>
                 )

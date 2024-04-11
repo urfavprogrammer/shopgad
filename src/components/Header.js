@@ -8,7 +8,7 @@ export const Header = () => {
         <header className="poppins-regular ">
 
             <Link to="/" className="logo">
-                <img src={logo} alt="Shopgad" />
+                <img src={logo} alt="Shopgad Logo" />
                 <span>Shopgad</span>
             </Link>
 
@@ -19,9 +19,9 @@ export const Header = () => {
 
             </nav>
 
-            <NavLink to="" className="items">
+            <Link to="/cart" className="items">
                 Cart: 2
-            </NavLink>
+            </Link>
 
         </header>
   )

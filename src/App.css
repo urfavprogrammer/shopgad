@@ -76,6 +76,9 @@ nav {
   max-width: 150px;
   padding: 7px 10px;
 }
+#addCart:hover {
+  background-color: #ac0d14;
+}
 
 .cart{
   margin: 30px 0;
@@ -99,6 +102,11 @@ nav {
  .cartCard .productPrice {
    margin-right: 10px;
    width: 100px;
+ }
+ .cartCard img{
+  height: 100px;
+  margin-right: 10px;
+  width: 150px;
  }
 
  .cartCard button {
