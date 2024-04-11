@@ -1,11 +1,14 @@
-
-import { Header } from './components/Header ';
+import { AllRoutes } from './routes/AllRoutes';
+import { Header, Footer } from './components/index';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
+    <div className="App poppins-regular">
+      <Header />
+      <AllRoutes />
+      <Footer />
     </div>
   );
 }
