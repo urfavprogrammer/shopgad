@@ -1,21 +1,13 @@
-import {useState } from "react";
-import { useFetch } from "../hooks";
-// import watch from "../assets/watch.jpg";
+// import {useState } from "react";
+// import { useFetch } from "../hooks";
 
-export const Card = () => {
-    const [url, setUrl] = useState("http://localhost:8000/products")
-    const { data:products, loading, error } = useFetch(url);
+export const Card = ({product}) => {
+    // const [url, setUrl] = useState("http://localhost:8000/products")
+    // const { data:products, loading, error } = useFetch(url);
     
-
     return (
-        <>
-            { loading && <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div> }
-
-            { error && <p>{error}</p>}
-
-            {products && products.map((product, index) => {
-                return (
-                    <div className="product" key={index}>
+       
+                    <div className="product">
                         <img src={product.img} alt="" />
                         <p className="name">{product.name}</p>
 
@@ -24,11 +16,7 @@ export const Card = () => {
                             <button id="addCart">Add To Cart</button>
                         </div>
                     </div>
-                )
-            })}
-        </>
-        
-       
+         
     )
 }
 
